@@ -10,3 +10,7 @@ This can be done, by running the following command in a Powershell terminal:
 PS> Install-Module Selenium
 ```
 
+## Known issues
+
+If the user tabs out of the chrome session, the script is no longer able to save videos.
+
