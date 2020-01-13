@@ -7,7 +7,6 @@ $moodleCourseUrl = "https://www.moodle.aau.dk/course/view.php?id=31429"
 
 $username = Read-Host -Prompt "Enter your username: "
 $password = Read-Host -Prompt "Enter your password: "
-$i = 1
 
 
 function DownloadVideosOnPage {
