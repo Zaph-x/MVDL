@@ -1,12 +1,9 @@
 Import-Module -Name Selenium
 
-$time = Get-Date -Format "ddMMyyyy-HHmmss"
-$location = Get-Location
 
 $moodleBaseUrl = "https://www.moodle.aau.dk"
 $moodleLoginUrl = "https://www.moodle.aau.dk/login"
 $moodleCourseUrl = "https://www.moodle.aau.dk/course/view.php?id=31429"
-$transcriptFile = ".\transcript - $($time).txt"
 
 $username = Read-Host -Prompt "Enter your username: "
 $password = Read-Host -Prompt "Enter your password: "
@@ -66,7 +63,7 @@ function DownloadFromPage {
 
 
 
-$Driver = Start-SeChrome -DisableBuiltInPDFViewer $true -HideVersionHint -DefaultDownloadPath $location.Path
+$Driver = Start-SeChrome -DisableBuiltInPDFViewer $true -HideVersionHint
 $window = Get-SeWindow -Driver $Driver
 
 if ($Driver) {
@@ -87,7 +84,7 @@ if ($Driver) {
     
   
 
-    
+    Stop-SeDriver -Driver $Driver
 
 
 }
